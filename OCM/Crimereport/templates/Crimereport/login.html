@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="col">
+                <h4 class="SignUp-tag">LogIn to get started</h4>
+                <form method="post">
+                    {{ form.as_p }}
+                    {% csrf_token %}
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <p><input type="submit" value="Log in"></p>
+                        </div>
+                    </div>        
+                </form>
+            </div>
+        </div>
+    </div>
+</div>                
+
+{% endblock %}

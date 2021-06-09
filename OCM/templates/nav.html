@@ -1,0 +1,19 @@
+{% url '' as Home %}
+{% url '' as Complaint_Search %}
+{% url '' as DataAnalysis %}
+{% url '' as LogIn %}
+{% url '' as Report_a_Crime %}
+
+<nav>
+    <div class="menu-bar">
+        <ul>
+            <li>
+                <a href={{Home}} class="{% if request.path == Home %}active{% endif %}">Home</a>
+            </li>
+            <li><a href={{Complaint_Search}}>Complaints Search</a></li>
+            <li><a href={{LogIn}}>LogIn</a></li>
+            <li><a href={{DataAnalysis}}>Data Analysis</a></li>
+            <li><a href={{Report_a_Crime}}>Report a Crime</a></li>
+        </ul>
+    </div>
+</nav>

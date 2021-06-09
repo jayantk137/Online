@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h1>Dashboard</h1>
+    <p>Welcome to your dashboard. You can <a href="{% url "password_change" %}">change your password</a>.</p>
+    <div>
+        <h1><a href="{% url 'CriminalProfile' %}">Add Criminal Info</a></h1>
+        <h1><a href="{% url 'FIRInfo' %}">See Registered FIR</a></h1>
+        <h1><a href="{% url 'CriminalDetail' %}">See Criminal Details</a></h1>
+        <h1><a href="{% url 'statistics' %}">See Statistics</a></h1>
+    </div>
+</div>
+
+{% endblock %}
